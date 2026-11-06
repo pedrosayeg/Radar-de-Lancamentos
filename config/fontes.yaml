@@ -200,9 +200,12 @@ fontes:
     generalista: true
 
   - nome: Edusp
-    tipo: sitemap
-    url: https://www.edusp.com.br/wp-sitemap.xml
-    sitemaps_incluir: ["posts-livros-"]
+    # O sitemap da Edusp não responde a tempo; lê a vitrine de lançamentos
+    tipo: pagina
+    url: https://www.edusp.com.br
+    paginas: ["https://www.edusp.com.br/livros/?filtro=lancamentos"]
+    incluir_url: "/livros/[a-z0-9-]+/$"
+    aceitar_sem_produto: true
 
   - nome: Jandaíra
     tipo: sitemap
