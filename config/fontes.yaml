@@ -82,6 +82,8 @@ fontes:
     url: https://editoraelefante.com.br
 
   - nome: n-1 edições
+    # Desativada em 06/11/2026: o site responde HTTP 429 (bloqueio de acesso automático) a qualquer leitura.
+    ativo: false
     tipo: woocommerce
     url: https://n-1edicoes.org
 
@@ -102,6 +104,8 @@ fontes:
     areas_padrao: [Direito]
 
   - nome: Marcial Pons
+    # Desativada em 06/11/2026: o site responde HTTP 429 (bloqueio de acesso automático) a qualquer leitura.
+    ativo: false
     tipo: woocommerce
     url: https://marcialpons.com.br
     areas_padrao: [Direito]

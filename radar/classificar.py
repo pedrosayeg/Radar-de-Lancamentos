@@ -44,7 +44,8 @@ NAO_TEORIA = ["romance", "ficcao", "conto", "contos", "poesia", "poemas", "infan
               "auto-ajuda", "desenvolvimento pessoal", "colorir", "livro-jogo", "agenda ", "calendario",
               "carreira e desenvolvimento", "espiritualidade", "dieta", "fantasia", "thriller", "suspense",
               "literatura brasileira", "literatura estrangeira", "box ", "kit ", "combo", "caneca", "ecobag",
-              "camiseta", "vade mecum", "questoes comentadas", "concurso", "oab 1a fase", "resumo para"]
+              "camiseta", "vade mecum", "vendas", "marketing", "lideranca", "empreended",
+              "gestao de pessoas", "produtividade", "financas pessoais", "investimentos", "questoes comentadas", "concurso", "oab 1a fase", "resumo para"]
 
 
 # Indícios de ficção ou de livro infantil na sinopse
@@ -61,7 +62,9 @@ def heuristica(livro: dict, fonte: dict, areas_validas: list[str]) -> dict:
     cabecalho = _norm(" ".join(livro.get("categorias") or []) + " " + livro.get("titulo", ""))
     descricao = _norm(livro.get("descricao", "")[:500])
 
-    nao = any(p in cabecalho for p in NAO_TEORIA) or any(p in cabecalho for p in NAO_LIVRO)
+    # "Não ficção" não pode disparar o filtro de "ficção"
+    sem_nf = re.sub(r"nao[ -]ficcao", " ", cabecalho)
+    nao = any(p in sem_nf for p in NAO_TEORIA) or any(p in sem_nf for p in NAO_LIVRO)
     if sum(descricao.count(s) for s in SINAIS_FICCAO) >= 2 or re.search(r"\(vol\. ?\d+", titulo):
         nao = True
 
