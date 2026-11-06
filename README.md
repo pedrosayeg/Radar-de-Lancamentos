@@ -1,2 +1,2 @@
-# Radar-de-Lan-amentos
+# Radar-de-Lancamentos
 Sistema monitorador de lançamentos de livros de teoria
