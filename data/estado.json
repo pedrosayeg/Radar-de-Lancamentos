@@ -205,8 +205,10 @@
    "conhecidos": 4084
   },
   "Edusp": {
-   "falhas_seguidas": 1,
-   "ultimo_erro": "2026-11-06: falha ao acessar https://www.edusp.com.br/wp-sitemap-posts-livros-1.xml: HTTPSConnectionPool(host='www.edusp.com.br', port=443): Read timed out. (read timeout=40)"
+   "falhas_seguidas": 0,
+   "ultimo_erro": "",
+   "ultima_ok": "2026-11-06",
+   "conhecidos": 20
   },
   "Jandaíra": {
    "falhas_seguidas": 0,
@@ -227,5 +229,5 @@
    "conhecidos": 1490
   }
  },
- "ultima_execucao": "2026-11-06T14:25-03:00"
+ "ultima_execucao": "2026-11-06T14:27-03:00"
 }
