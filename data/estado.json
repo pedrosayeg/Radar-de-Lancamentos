@@ -1,0 +1,115 @@
+{
+ "fontes": {
+  "Boitempo": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 785
+  },
+  "Companhia das Letras (inclui Zahar e demais selos)": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Vozes": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Grupo Record": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 1000
+  },
+  "Hedra": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 290
+  },
+  "Veneta": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 253
+  },
+  "Todavia": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 622
+  },
+  "Autêntica": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 806
+  },
+  "Fósforo": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 298
+  },
+  "Perspectiva": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 1253
+  },
+  "Expressão Popular": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Elefante": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "n-1 edições": {
+   "falhas_seguidas": 1,
+   "ultimo_erro": "2026-11-06: falha ao acessar https://n-1edicoes.org/wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc: HTTP 429 (limite de acessos do site)"
+  },
+  "Autonomia Literária": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Zagodoni": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Contracorrente": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 280
+  },
+  "Marcial Pons": {
+   "falhas_seguidas": 1,
+   "ultimo_erro": "2026-11-06: falha ao acessar https://marcialpons.com.br/wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc: HTTP 429 (limite de acessos do site)"
+  },
+  "JusPodivm": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 1570
+  },
+  "Thoth": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-06",
+   "ultimo_erro": "",
+   "conhecidos": 3640
+  }
+ },
+ "ultima_execucao": "2026-11-06T12:20-03:00"
+}

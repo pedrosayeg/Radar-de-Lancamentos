@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar de Lançamentos</title>
+<meta name="description" content="Lançamentos de livros de teoria em direito, política, sociologia, filosofia, psicanálise, história e áreas próximas.">
+<link rel="alternate" type="application/rss+xml" title="Radar de Lançamentos" href="feeds/todos.xml">
+<style>
+  :root { --tinta:#1f1d1a; --suave:#6b665e; --linha:#e4ded3; --fundo:#faf8f4; --cartao:#fff; --destaque:#8a2d1c; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--fundo); color:var(--tinta); font:16px/1.5 Georgia, "Times New Roman", serif; }
+  header { padding:40px 20px 24px; max-width:1100px; margin:auto; }
+  h1 { font-size:34px; margin:0 0 6px; letter-spacing:-.5px; }
+  header p { margin:0; color:var(--suave); max-width:720px; }
+  .acoes { margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; font-family:system-ui, sans-serif; font-size:14px; }
+  .acoes a { padding:8px 14px; border:1px solid var(--tinta); border-radius:999px; color:var(--tinta); text-decoration:none; }
+  .acoes a.principal { background:var(--tinta); color:#fff; }
+  main { max-width:1100px; margin:auto; padding:0 20px 60px; display:grid; grid-template-columns:240px 1fr; gap:32px; }
+  aside { font-family:system-ui, sans-serif; font-size:14px; position:sticky; top:16px; align-self:start; }
+  aside h3 { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--suave); margin:20px 0 8px; }
+  aside label { display:block; padding:2px 0; cursor:pointer; }
+  aside input[type=search], aside select { width:100%; padding:8px; border:1px solid var(--linha); border-radius:6px; background:#fff; font:inherit; }
+  main > section, .livro > div { min-width:0; }
+  .livro h2, .desc { overflow-wrap:anywhere; }
+  .contagem { color:var(--suave); font-family:system-ui, sans-serif; font-size:14px; margin-bottom:12px; }
+  .livro { display:grid; grid-template-columns:72px 1fr; gap:16px; background:var(--cartao); border:1px solid var(--linha); border-radius:8px; padding:14px; margin-bottom:12px; }
+  .livro img { width:72px; height:104px; object-fit:cover; border-radius:3px; background:var(--linha); }
+  .livro .sem-capa { width:72px; height:104px; background:var(--linha); border-radius:3px; }
+  .livro h2 { font-size:18px; margin:0 0 2px; }
+  .livro h2 a { color:var(--tinta); text-decoration:none; }
+  .livro h2 a:hover { color:var(--destaque); }
+  .meta { font-family:system-ui, sans-serif; font-size:13px; color:var(--suave); }
+  .desc { font-size:14px; margin-top:6px; color:#3b3833; }
+  .tag { display:inline-block; font-family:system-ui, sans-serif; font-size:11px; padding:1px 8px; border-radius:999px; border:1px solid var(--linha); margin:6px 4px 0 0; color:var(--suave); }
+  .tag.pre { border-color:var(--destaque); color:var(--destaque); }
+  footer { max-width:1100px; margin:auto; padding:0 20px 40px; font-family:system-ui, sans-serif; font-size:13px; color:var(--suave); }
+  details { margin-top:12px; } table { border-collapse:collapse; margin-top:8px; } td, th { border-bottom:1px solid var(--linha); padding:4px 10px 4px 0; text-align:left; }
+  .vazio { padding:30px; text-align:center; color:var(--suave); border:1px dashed var(--linha); border-radius:8px; }
+  @media (max-width:760px) { main { grid-template-columns:1fr; } aside { position:static; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Radar de Lançamentos</h1>
+  <p>Lançamentos de livros de teoria em direito, política, sociologia, filosofia, psicanálise, história e áreas próximas.</p>
+  <div class="acoes">
+    <a class="principal" href="#" onclick="alert('Inscrição por e-mail em breve.');return false">Receber por e-mail</a>
+    <a href="feeds/todos.xml">Feed RSS</a>
+    <a href="#fontes">Editoras monitoradas</a>
+  </div>
+</header>
+<main>
+  <aside>
+    <h3>Buscar</h3>
+    <input type="search" id="busca" placeholder="Título, autor, editora">
+    <h3>Áreas</h3>
+    <div id="areas"></div>
+    <h3>Editora</h3>
+    <select id="editora"><option value="">Todas</option></select>
+    <h3>Período</h3>
+    <select id="periodo">
+      <option value="30">Últimos 30 dias</option>
+      <option value="90">Últimos 90 dias</option>
+      <option value="365">Último ano</option>
+      <option value="0" selected>Tudo</option>
+    </select>
+  </aside>
+  <section>
+    <div class="contagem" id="contagem"></div>
+    <div id="lista"></div>
+  </section>
+</main>
+<footer id="fontes">
+  <p>Lista montada automaticamente a partir dos sites das editoras. A classificação por área é automática e pode conter erros. Última atualização: 2026-11-06 às 12:20-03:00.</p>
+  <details>
+    <summary>Editoras monitoradas e situação da última leitura</summary>
+    <table><tr><th>Editora</th><th>Situação</th><th>Última leitura ok</th></tr><tr><td>Autonomia Literária</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Autêntica</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Boitempo</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Companhia das Letras (inclui Zahar e demais selos)</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Contracorrente</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Elefante</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Expressão Popular</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Fósforo</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Grupo Record</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Hedra</td><td>ok</td><td>2026-11-06</td></tr><tr><td>JusPodivm</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Marcial Pons</td><td>falhou 1x</td><td>-</td></tr><tr><td>Perspectiva</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Thoth</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Todavia</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Veneta</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Vozes</td><td>ok</td><td>2026-11-06</td></tr><tr><td>Zagodoni</td><td>ok</td><td>2026-11-06</td></tr><tr><td>n-1 edições</td><td>falhou 1x</td><td>-</td></tr></table>
+  </details>
+</footer>
+<script>
+const AREAS = ["Direito", "Política", "Sociologia", "Filosofia", "Psicanálise", "História", "Economia", "Antropologia", "Outras humanidades"];
+let LIVROS = [];
+const $ = s => document.querySelector(s);
+const esc = s => (s || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = d => d ? d.slice(8,10) + "/" + d.slice(5,7) + "/" + d.slice(0,4) : "";
+const norm = s => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+function montarFiltros() {
+  $("#areas").innerHTML = AREAS.map(a => `<label><input type="checkbox" value="${esc(a)}" checked> ${esc(a)}</label>`).join("");
+  const eds = [...new Set(LIVROS.map(l => l.editora))].sort((a,b) => a.localeCompare(b, "pt"));
+  $("#editora").innerHTML += eds.map(e => `<option>${esc(e)}</option>`).join("");
+  document.querySelectorAll("aside input, aside select").forEach(el => el.addEventListener("input", render));
+}
+function render() {
+  const marcadas = new Set([...document.querySelectorAll("#areas input:checked")].map(i => i.value));
+  const ed = $("#editora").value, q = norm($("#busca").value), dias = +$("#periodo").value;
+  const limite = dias ? new Date(Date.now() - dias * 864e5).toISOString().slice(0,10) : "";
+  const hoje = new Date().toISOString().slice(0,10);
+  const f = LIVROS.filter(l =>
+    (l.areas || []).some(a => marcadas.has(a)) &&
+    (!ed || l.editora === ed) &&
+    (!limite || l.visto_em >= limite) &&
+    (!q || norm(l.titulo + " " + l.autores + " " + l.editora).includes(q)));
+  $("#contagem").textContent = `${f.length} livro(s)`;
+  $("#lista").innerHTML = f.length ? f.map(l => `
+    <article class="livro">
+      ${l.imagem ? `<img loading="lazy" src="${esc(l.imagem)}" alt="">` : `<div class="sem-capa"></div>`}
+      <div>
+        <h2><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titulo)}</a></h2>
+        <div class="meta">${l.autores ? esc(l.autores) + " · " : ""}${esc(l.editora)} · visto em ${fmt(l.visto_em)}${l.data_lancamento ? " · lançamento " + fmt(l.data_lancamento) : ""}</div>
+        ${l.descricao ? `<div class="desc">${esc(l.descricao.slice(0, 320))}</div>` : ""}
+        <div>${(l.areas || []).map(a => `<span class="tag">${esc(a)}</span>`).join("")}${l.data_lancamento && l.data_lancamento > hoje ? `<span class="tag pre">pré-venda</span>` : ""}</div>
+      </div>
+    </article>`).join("") : `<div class="vazio">Nenhum livro com esses filtros. Na primeira semana o catálogo ainda está sendo formado.</div>`;
+}
+fetch("livros.json").then(r => r.json()).then(d => { LIVROS = d; montarFiltros(); render(); })
+  .catch(() => { $("#lista").innerHTML = `<div class="vazio">Não foi possível carregar o catálogo.</div>`; });
+</script>
+</body>
+</html>
