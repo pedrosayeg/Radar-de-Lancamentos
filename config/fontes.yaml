@@ -1,0 +1,127 @@
+# Fontes monitoradas pelo Radar de Lançamentos.
+#
+# Cada fonte tem um "tipo", que diz como o robô lê o site:
+#   shopify      lojas Shopify (lê /products.json, que traz data de publicação)
+#   woocommerce  lojas WordPress/WooCommerce (lê a Store API, do mais novo para o mais antigo)
+#   vtex         lojas VTEX (lê a busca pública ordenada por data de lançamento)
+#   sitemap      qualquer site com sitemap.xml (detecta páginas de produto novas e abre cada uma)
+#
+# Campos opcionais:
+#   areas_padrao   áreas usadas quando o classificador não encontrar nenhuma (útil para editoras jurídicas)
+#   ativo          false desliga a fonte sem apagar a configuração
+#   editora        nome exibido da editora, se for diferente do nome da fonte
+#   incluir_url    expressão regular que a URL do produto precisa ter (fontes sitemap)
+#   excluir_url    expressão regular de URLs a ignorar (fontes sitemap)
+#   sitemaps_incluir  em índices de sitemap, só abre os sub-sitemaps cujo endereço contenha um destes trechos
+#   generalista    true para editoras que publicam muita ficção. Sem IA, o filtro por palavras-chave fica mais rígido
+#
+# Para acrescentar uma editora, copie um bloco parecido e ajuste. Se não souber o tipo,
+# rode: python -m radar.diagnostico https://site-da-editora.com.br
+
+fontes:
+  # ---------------- Ciências humanas, política, filosofia, psicanálise ----------------
+  - nome: Boitempo
+    tipo: sitemap
+    url: https://www.boitempoeditorial.com.br/sitemap.xml
+    incluir_url: "/produto/"
+
+  - nome: Companhia das Letras (inclui Zahar e demais selos)
+    tipo: vtex
+    url: https://www.companhiadasletras.com.br
+    generalista: true
+
+  - nome: Vozes
+    tipo: vtex
+    url: https://www.livrariavozes.com.br
+    generalista: true
+
+  - nome: Grupo Record
+    tipo: shopify
+    url: https://www.record.com.br
+    generalista: true
+
+  - nome: Hedra
+    tipo: shopify
+    url: https://www.hedra.com.br
+
+  - nome: Veneta
+    tipo: shopify
+    url: https://veneta.com.br
+    generalista: true
+
+  - nome: Todavia
+    tipo: sitemap
+    url: https://todavialivros.com.br/sitemap.xml
+    sitemaps_incluir: ["/sitemap/livros"]
+    incluir_url: "/livros/"
+    generalista: true
+
+  - nome: Autêntica
+    tipo: sitemap
+    url: https://www.grupoautentica.com.br/sitemap.xml
+    # Só os sub-sitemaps de categorias de não ficção
+    sitemaps_incluir: ["historia", "filosofia", "ciencias-humanas", "ciencias-sociais", "politica", "psicanalise", "psicologia", "educacao", "direito", "negocios-e-economia", "sociologia", "antropologia"]
+
+  - nome: Fósforo
+    tipo: sitemap
+    url: https://www.fosforoeditora.com.br/sitemap.xml
+    incluir_url: "/produto/"
+    generalista: true
+
+  - nome: Perspectiva
+    tipo: sitemap
+    url: https://www.editoraperspectiva.com.br/sitemap.xml
+    incluir_url: "/produtos/"
+
+  - nome: Expressão Popular
+    tipo: woocommerce
+    url: https://expressaopopular.com.br
+
+  - nome: Elefante
+    tipo: woocommerce
+    url: https://editoraelefante.com.br
+
+  - nome: n-1 edições
+    tipo: woocommerce
+    url: https://n-1edicoes.org
+
+  - nome: Autonomia Literária
+    tipo: woocommerce
+    url: https://autonomialiteraria.com.br
+
+  - nome: Zagodoni
+    tipo: woocommerce
+    url: https://zagodoni.com.br
+    areas_padrao: [Psicanálise]
+
+  # ---------------- Direito ----------------
+  - nome: Contracorrente
+    tipo: sitemap
+    url: https://www.editoracontracorrente.com.br/sitemap.xml
+    incluir_url: "/produtos/"
+    areas_padrao: [Direito]
+
+  - nome: Marcial Pons
+    tipo: woocommerce
+    url: https://marcialpons.com.br
+    areas_padrao: [Direito]
+
+  - nome: D'Plácido
+    # Desativada: o site bloqueia leitura automática das páginas de produto (responde vazio).
+    ativo: false
+    tipo: sitemap
+    url: https://www.editoradplacido.com.br/sitemap.xml
+    excluir_url: "/(direito|literatura|colecoes|seguranca|programa-fidelidade|politica-de-privacidade|quem-somos|contato|fale-conosco|carrinho|conta|autores?)(/|$)"
+    areas_padrao: [Direito]
+
+  - nome: JusPodivm
+    tipo: sitemap
+    url: https://www.editorajuspodivm.com.br/media/sitemap/sitemap.xml
+    excluir_url: "/(colecoes|disciplinas|carrosseis|tag|nivel|autores?|casadinha|combo|kit|black-friday)"
+    areas_padrao: [Direito]
+
+  - nome: Thoth
+    tipo: sitemap
+    url: https://editorathoth.com.br/sitemap.xml
+    incluir_url: "/produto/"
+    areas_padrao: [Direito]

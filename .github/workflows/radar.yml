@@ -1,0 +1,89 @@
+name: Radar de Lançamentos
+
+on:
+  schedule:
+    # Todo dia às 08:17 (horário de Brasília). O e-mail só sai no dia definido em config/geral.yaml.
+    - cron: "17 11 * * *"
+  # Ao alterar fontes ou código, roda uma coleta (sem enviar e-mail) para testar
+  push:
+    branches: [main]
+    paths: ["config/**", "radar/**", "requirements.txt", ".github/workflows/radar.yml"]
+  workflow_dispatch:
+    inputs:
+      enviar:
+        description: "Enviar o e-mail agora com as novidades pendentes"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Coletar, classificar, gerar site e enviar e-mail
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_ATRIBUTO_AREAS: ${{ secrets.BREVO_ATRIBUTO_AREAS }}
+          REMETENTE_EMAIL: ${{ secrets.REMETENTE_EMAIL }}
+          ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USUARIO: ${{ secrets.SMTP_USUARIO }}
+          SMTP_SENHA: ${{ secrets.SMTP_SENHA }}
+          DESTINATARIOS: ${{ secrets.DESTINATARIOS }}
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python -m radar.main --sem-envio
+          elif [ "${{ inputs.enviar }}" = "true" ]; then
+            python -m radar.main --enviar
+          else
+            python -m radar.main
+          fi
+
+      - name: Salvar catálogo e site no repositório
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+          else
+            git commit -m "Atualiza catálogo ($(date -u +%Y-%m-%d))"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Preparar o site para o GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  publicar-site:
+    needs: coletar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

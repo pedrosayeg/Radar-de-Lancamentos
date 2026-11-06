@@ -1,0 +1,44 @@
+# Configurações gerais do Radar de Lançamentos.
+
+titulo: Radar de Lançamentos
+descricao: Lançamentos de livros de teoria em direito, política, sociologia, filosofia, psicanálise, história e áreas próximas.
+
+# Endereço público do site (GitHub Pages). Ajuste se mudar o nome do repositório.
+url_site: https://pedrosayeg.github.io/Radar-de-Lancamentos/
+
+# Link do formulário de inscrição (por exemplo, o formulário do Brevo).
+# Enquanto estiver vazio, o site mostra um aviso no lugar do botão.
+url_inscricao: ""
+
+# Áreas usadas na classificação, no site e na escolha dos amigos.
+areas:
+  - Direito
+  - Política
+  - Sociologia
+  - Filosofia
+  - Psicanálise
+  - História
+  - Economia
+  - Antropologia
+  - Outras humanidades
+
+# Quantos dias para trás um livro com data conhecida entra no catálogo na primeira leitura de uma fonte.
+janela_inicial_dias: 30
+# Pré-vendas com data de lançamento até quantos dias no futuro entram no catálogo.
+janela_futuro_dias: 180
+# Limite de páginas de produto abertas por fonte do tipo sitemap em cada execução.
+max_paginas_por_fonte: 40
+
+envio:
+  # Dia da semana em que o e-mail sai (0 = segunda ... 6 = domingo). As coletas podem rodar todo dia.
+  dia_semana: 0
+  remetente_nome: Radar de Lançamentos
+  assunto: "Radar de Lançamentos: novidades da semana"
+  # Avisar o administrador quando uma fonte falhar este número de execuções seguidas.
+  alerta_falhas_seguidas: 3
+
+classificacao:
+  # Modelo usado quando a chave ANTHROPIC_API_KEY estiver configurada.
+  modelo: claude-haiku-5-5
+  # Livros que a IA marcar como "não é teoria" (ficção, infantil, autoajuda etc.) ficam fora do catálogo.
+  descartar_nao_teoria: true
