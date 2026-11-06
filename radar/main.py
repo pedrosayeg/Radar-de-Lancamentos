@@ -122,6 +122,10 @@ def executar(args) -> int:
     estado: dict = ler_json(DADOS / "estado.json", {"fontes": {}})
     ids_catalogo = {l["url"] for l in catalogo}
 
+    if not args.fonte:  # esquece fontes desativadas ou removidas, para não poluir o site e os alertas
+        ativas = {f["nome"] for f in fontes}
+        estado["fontes"] = {n: s for n, s in estado["fontes"].items() if n in ativas}
+
     novos_total: list[dict] = []
     for fonte in fontes:
         nome = fonte["nome"]
