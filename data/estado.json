@@ -72,10 +72,6 @@
    "ultimo_erro": "",
    "conhecidos": 100
   },
-  "n-1 edições": {
-   "falhas_seguidas": 1,
-   "ultimo_erro": "2026-11-06: falha ao acessar https://n-1edicoes.org/wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc: HTTP 429 (limite de acessos do site)"
-  },
   "Autonomia Literária": {
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-06",
@@ -94,10 +90,6 @@
    "ultimo_erro": "",
    "conhecidos": 280
   },
-  "Marcial Pons": {
-   "falhas_seguidas": 1,
-   "ultimo_erro": "2026-11-06: falha ao acessar https://marcialpons.com.br/wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc: HTTP 429 (limite de acessos do site)"
-  },
   "JusPodivm": {
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-06",
@@ -111,5 +103,5 @@
    "conhecidos": 3640
   }
  },
- "ultima_execucao": "2026-11-06T12:25-03:00"
+ "ultima_execucao": "2026-11-06T12:27-03:00"
 }
