@@ -45,7 +45,10 @@ NAO_TEORIA = ["romance", "ficcao", "conto", "contos", "poesia", "poemas", "infan
               "carreira e desenvolvimento", "espiritualidade", "dieta", "fantasia", "thriller", "suspense",
               "literatura brasileira", "literatura estrangeira", "box ", "kit ", "combo", "caneca", "ecobag",
               "camiseta", "vade mecum", "vendas", "marketing", "lideranca", "empreended",
-              "gestao de pessoas", "produtividade", "financas pessoais", "investimentos", "questoes comentadas", "concurso", "oab 1a fase", "resumo para"]
+              "gestao de pessoas", "produtividade", "financas pessoais", "investimentos",
+              "recursos humanos", "administracao de empresas", "contabilidade", "redes locais", "programacao",
+              "engenharia", "enfermagem", "medicina", "odontolog", "farmac", "nutricao", "fisioterap",
+              "veterinar", "anatomia", "fisiologia", "radiolog", "matematica", "fisica", "quimica", "estatistica", "questoes comentadas", "concurso", "oab 1a fase", "resumo para"]
 
 
 # Indícios de ficção ou de livro infantil na sinopse
@@ -57,6 +60,16 @@ NAO_LIVRO = ["estojo", "calice", "ciborio", "caneca", "ecobag", "camiseta", "mar
              "vale-presente", "cartao presente", "assinatura do clube"]
 
 
+def _regex(palavras: list[str]) -> re.Pattern:
+    # Casa só no início de palavra, para "raca" não casar com "administracao"
+    return re.compile(r"\b(?:" + "|".join(re.escape(p.strip()) for p in palavras) + ")")
+
+
+_PADROES = {area: _regex(p) for area, p in PALAVRAS.items()}
+_NAO = _regex(NAO_TEORIA + NAO_LIVRO)
+_FICCAO = _regex(SINAIS_FICCAO)
+
+
 def heuristica(livro: dict, fonte: dict, areas_validas: list[str]) -> dict:
     titulo = _norm(livro.get("titulo", ""))
     cabecalho = _norm(" ".join(livro.get("categorias") or []) + " " + livro.get("titulo", ""))
@@ -64,14 +77,14 @@ def heuristica(livro: dict, fonte: dict, areas_validas: list[str]) -> dict:
 
     # "Não ficção" não pode disparar o filtro de "ficção"
     sem_nf = re.sub(r"nao[ -]ficcao", " ", cabecalho)
-    nao = any(p in sem_nf for p in NAO_TEORIA) or any(p in sem_nf for p in NAO_LIVRO)
-    if sum(descricao.count(s) for s in SINAIS_FICCAO) >= 2 or re.search(r"\(vol\. ?\d+", titulo):
+    nao = bool(_NAO.search(sem_nf))
+    if len(_FICCAO.findall(descricao)) >= 2 or re.search(r"\(vol\. ?\d+", titulo):
         nao = True
 
     forte, pontos = {}, {}
-    for area, palavras in PALAVRAS.items():
-        n_cab = sum(cabecalho.count(p) for p in palavras)
-        n_desc = sum(descricao.count(p) for p in palavras)
+    for area, padrao in _PADROES.items():
+        n_cab = len(padrao.findall(cabecalho))
+        n_desc = len(padrao.findall(descricao))
         if n_cab or n_desc:
             pontos[area] = 3 * n_cab + n_desc
             forte[area] = n_cab > 0 or n_desc >= 3

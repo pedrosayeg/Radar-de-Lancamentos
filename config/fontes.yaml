@@ -5,12 +5,15 @@
 #   woocommerce  lojas WordPress/WooCommerce (lê a Store API, do mais novo para o mais antigo)
 #   vtex         lojas VTEX (lê a busca pública ordenada por data de lançamento)
 #   sitemap      qualquer site com sitemap.xml (detecta páginas de produto novas e abre cada uma)
+#   pagina       sites sem sitemap útil (lê a página inicial ou de lançamentos e pega os links de produto)
 #
 # Campos opcionais:
 #   areas_padrao   áreas usadas quando o classificador não encontrar nenhuma (útil para editoras jurídicas)
 #   ativo          false desliga a fonte sem apagar a configuração
+#   aceitar_sem_produto  true quando as páginas de livro do site não se identificam como produto
 #   editora        nome exibido da editora, se for diferente do nome da fonte
-#   incluir_url    expressão regular que a URL do produto precisa ter (fontes sitemap)
+#   incluir_url    expressão regular que a URL do produto precisa ter (fontes sitemap e pagina)
+#   paginas        lista de endereços a ler (fontes pagina). Sem ela, lê o campo url
 #   excluir_url    expressão regular de URLs a ignorar (fontes sitemap)
 #   sitemaps_incluir  em índices de sitemap, só abre os sub-sitemaps cujo endereço contenha um destes trechos
 #   generalista    true para editoras que publicam muita ficção. Sem IA, o filtro por palavras-chave fica mais rígido
@@ -96,6 +99,117 @@ fontes:
     url: https://zagodoni.com.br
     areas_padrao: [Psicanálise]
 
+  - nome: Ubu
+    tipo: pagina
+    url: https://www.ubueditora.com.br
+    incluir_url: "^https://www\\.ubueditora\\.com\\.br/[a-z0-9-]+\\.html$"
+    excluir_url: "/(camiseta|ecobag|sacola|caneca|poster|cartaz|bolsa|bandeira|carimbo|caderno|agenda|luminaria|kit|combo|box|vale-presente|contato|livraria|colecoes|clube|sobre|quem-somos|imprensa|faq|privacidade|termos|trocas|loja|customer|checkout)"
+
+  - nome: Editora 34
+    tipo: pagina
+    url: https://editora34.com.br
+    incluir_url: "/livro/"
+    generalista: true
+
+  - nome: Editora Unesp
+    tipo: pagina
+    url: https://editoraunesp.com.br
+    incluir_url: "/catalogo/\\d{13},"
+    aceitar_sem_produto: true
+
+  - nome: Bazar do Tempo
+    tipo: shopify
+    url: https://www.bazardotempo.com.br
+
+  - nome: Âyiné
+    tipo: shopify
+    url: https://www.ayine.com.br
+    generalista: true
+
+  - nome: Relicário
+    tipo: woocommerce
+    url: https://www.relicarioedicoes.com
+    generalista: true
+
+  - nome: Mórula
+    tipo: woocommerce
+    url: https://morula.com.br
+
+  - nome: Sobinfluência
+    tipo: sitemap
+    url: https://sobinfluencia.com/sitemap.xml.gz
+    incluir_url: "/produtos/[^/]+"
+
+  - nome: n-versos
+    tipo: sitemap
+    url: https://www.nversos.com.br/sitemap.xml
+    incluir_url: "/produtos/[^/]+"
+    generalista: true
+
+  - nome: GLAC edições
+    tipo: sitemap
+    url: https://www.glacedicoes.com/sitemap.xml
+    sitemaps_incluir: ["store-products"]
+    incluir_url: "/product-page/"
+
+  - nome: Editora Fi
+    tipo: sitemap
+    url: https://www.editorafi.org/sitemap.xml
+    sitemaps_incluir: ["dynamic-livro_", "dynamic-livros_"]
+    areas_padrao: [Filosofia]
+
+  - nome: Cobogó
+    tipo: sitemap
+    url: https://www.cobogo.com.br/sitemap.xml
+    incluir_url: "/produto/"
+    excluir_url: "(ecobag|combo|kit|camiseta|bolsa|caneca|poster|vale-presente)"
+    generalista: true
+
+  - nome: Loyola (filosofia e humanidades)
+    editora: Loyola
+    tipo: sitemap
+    url: https://www.loyola.com.br/sitemap.xml
+    sitemaps_incluir: ["filosofia", "humanidades"]
+    incluir_url: "/produto/"
+    areas_padrao: [Filosofia]
+
+  - nome: WMF Martins Fontes
+    tipo: sitemap
+    url: https://www.wmfmartinsfontes.com.br/sitemap.xml
+    sitemaps_incluir: ["ciencias-humanas", "ciencias-sociais", "filosofia", "direito", "historia", "psicanalise", "psicologia", "sociologia", "politica", "economia", "antropologia"]
+    generalista: true
+
+  - nome: Contexto
+    tipo: sitemap
+    url: https://www.editoracontexto.com.br/sitemap.xml
+    excluir_url: "/(autores|organizadores|tradutores|newscontexto|contato|quem-somos|carrinho|login|minha-conta|politica|termos|blog|eventos|catalogo|livros|categoria|busca)(/|$)"
+    generalista: true
+
+  - nome: Blucher
+    tipo: sitemap
+    url: https://www.blucher.com.br/sitemap.xml
+    excluir_url: "/(autores|pagina|categoria|colecao|busca|carrinho|conta)(/|$)"
+    # As páginas de livro da Blucher não se identificam como produto
+    aceitar_sem_produto: true
+    generalista: true
+
+  - nome: EdUFSCar
+    tipo: sitemap
+    url: https://edufscar.com.br/sitemap.xml
+    incluir_url: "-\\d{9}$"
+    generalista: true
+
+  - nome: Edusp
+    tipo: sitemap
+    url: https://www.edusp.com.br/wp-sitemap.xml
+    sitemaps_incluir: ["posts-livros-"]
+
+  - nome: Jandaíra
+    tipo: sitemap
+    url: https://www.editorajandaira.com.br/sitemap.xml
+    generalista: true
+    excluir_url: "/(pagina|categoria|carrinho|conta|contato|quem-somos|blog|autores?|busca|politica)(/|$)"
+
   # ---------------- Direito ----------------
   - nome: Contracorrente
     tipo: sitemap
@@ -129,3 +243,18 @@ fontes:
     url: https://editorathoth.com.br/sitemap.xml
     incluir_url: "/produto/"
     areas_padrao: [Direito]
+
+  - nome: Fórum
+    tipo: sitemap
+    url: https://negocios.forumconhecimento.com.br/sitemap.xml
+    incluir_url: "/produto/"
+    areas_padrao: [Direito]
+
+  - nome: Grupo GEN (Forense, Atlas, Método e outros)
+    editora: Grupo GEN
+    tipo: sitemap
+    url: https://www.grupogen.com.br/media/gen/sitemap.xml
+    # Só páginas de livro (terminam em ISBN); e-books e kits ficam de fora
+    incluir_url: "97[89]\\d{10}"
+    excluir_url: "/(e-book|ebook|kit|combo|livro-serie-fundamentos-de-odontologia)"
+    generalista: true

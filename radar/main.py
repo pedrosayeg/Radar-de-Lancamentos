@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 import yaml
@@ -55,6 +56,34 @@ def dentro_da_janela(data_iso: str | None, dia: dt.date, passado: int, futuro: i
     except ValueError:
         return False
     return dia - dt.timedelta(days=passado) <= d <= dia + dt.timedelta(days=futuro)
+
+
+RUIDO_TITULO = re.compile(r"\s*[\[(][^\])]*(pr[ée][ -]?venda|envio|lan[çc]amento|de volta|promo|esgotado|reimpress)[^\])]*[\])]\s*", re.I)
+
+
+def limpar_titulos(livros: list[dict]) -> None:
+    """Remove marcações de loja como "[pré-venda]" ou "[envio em 07/12]" do título."""
+    for l in livros:
+        if l.get("titulo"):
+            l["titulo"] = re.sub(r"\s{2,}", " ", RUIDO_TITULO.sub(" ", l["titulo"])).strip(" -–—")
+
+
+def chave_titulo(livro: dict) -> tuple[str, str]:
+    t = unicodedata.normalize("NFKD", (livro.get("titulo") or "").lower())
+    t = re.sub(r"[^a-z0-9]", "", t.encode("ascii", "ignore").decode())
+    return t, (livro.get("fonte") or "")
+
+
+def remover_repetidos(livros: list[dict], ja_vistos: set) -> list[dict]:
+    """Evita o mesmo título duas vezes na mesma fonte (edições, formatos ou cadastros duplicados)."""
+    saida = []
+    for l in livros:
+        chave = chave_titulo(l)
+        if not chave[0] or chave in ja_vistos:
+            continue
+        ja_vistos.add(chave)
+        saida.append(l)
+    return saida
 
 
 def limpar_descricoes(livros: list[dict]) -> None:
@@ -99,7 +128,10 @@ def coletar_fonte(fonte, vistos_fonte: set, primeira: bool, config: dict, dia: d
                 log(f"    não consegui ler {url}: {e}")
                 detalhe = None
             vistos_fonte.add(url)
-            if detalhe:
+            # Descarta páginas que não são de produto (institucionais, categorias), salvo se a fonte dispensar
+            exigir = fonte.get("exigir_produto", fonte["tipo"] == "pagina" or not fonte.get("incluir_url"))
+            eh_produto = detalhe.pop("eh_produto", True) if detalhe else False
+            if detalhe and (eh_produto or not exigir or fonte.get("aceitar_sem_produto")):
                 novos.append(detalhe)
             continue
         vistos_fonte.add(url)
@@ -121,6 +153,7 @@ def executar(args) -> int:
     vistos: dict[str, list[str]] = ler_json(DADOS / "vistos.json", {})
     estado: dict = ler_json(DADOS / "estado.json", {"fontes": {}})
     ids_catalogo = {l["url"] for l in catalogo}
+    titulos_catalogo = {chave_titulo(l) for l in catalogo}
 
     if not args.fonte:  # esquece fontes desativadas ou removidas, para não poluir o site e os alertas
         ativas = {f["nome"] for f in fontes}
@@ -143,6 +176,8 @@ def executar(args) -> int:
                 if not n.get("editora"):
                     n["editora"] = nome
             novos = [n for n in novos if n["url"] not in ids_catalogo]
+            limpar_titulos(novos)
+            novos = remover_repetidos(novos, titulos_catalogo)
             limpar_descricoes(novos)
             log(f"    {len(novos)} novo(s); {len(conjunto)} produtos conhecidos")
             novos_total += novos

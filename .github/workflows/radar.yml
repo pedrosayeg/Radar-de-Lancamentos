@@ -29,7 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
+      # Sempre parte da versão mais recente do main (inclui o catálogo salvo pela execução anterior)
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -69,8 +72,13 @@ jobs:
             echo "Nada mudou."
           else
             git commit -m "Atualiza catálogo ($(date -u +%Y-%m-%d))"
-            git pull --rebase origin main
-            git push
+            # Em caso de conflito com outra execução, prevalece o que esta execução acabou de gerar
+            for tentativa in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && exit 0
+              git rebase --abort 2>/dev/null || true
+              sleep 10
+            done
+            exit 1
           fi
 
       - name: Preparar o site para o GitHub Pages

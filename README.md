@@ -7,7 +7,7 @@ Site: https://pedrosayeg.github.io/Radar-de-Lancamentos/ (depois de ativar o Git
 ## Como funciona
 
 1. Todo dia às 8h17 (Brasília), o GitHub roda o robô (`.github/workflows/radar.yml`).
-2. O robô lê cada editora listada em `config/fontes.yaml`. Dependendo do tipo de loja, ele usa a API pública da loja (Shopify, WooCommerce, VTEX) ou compara o sitemap do site com a leitura anterior para achar páginas de produto novas.
+2. O robô lê cada editora listada em `config/fontes.yaml`. Dependendo do tipo de loja, ele usa a API pública da loja (Shopify, WooCommerce, VTEX), compara o sitemap do site com a leitura anterior para achar páginas de produto novas ou, em sites sem sitemap, lê a página inicial e pega os links de livros novos.
 3. Os livros novos são classificados por área. Com a chave da API da Anthropic configurada, quem classifica é o Claude, que também descarta ficção, infantil, autoajuda e afins. Sem a chave, o robô usa palavras-chave, o que funciona razoavelmente para editoras especializadas e mal para editoras generalistas.
 4. O catálogo (`data/livros.json`) e o site (`docs/`) são atualizados e publicados.
 5. No dia da semana configurado (padrão segunda-feira), sai o e-mail com tudo o que entrou desde o último envio.
@@ -57,7 +57,7 @@ Quem não marcar nenhuma área recebe todas.
 ## Limitações conhecidas
 
 - Ler sites de editoras é frágil. Se uma editora mudar o site, a leitura dela pode falhar até alguém ajustar a configuração. O robô registra a falha e, com `ADMIN_EMAIL` configurado, avisa depois de 3 falhas seguidas.
-- Editoras que não têm loja própria, que bloqueiam leitura automática ou que só vendem por marketplaces não estão cobertas. A D'Plácido está desativada por esse motivo.
+- Editoras que não têm loja própria, que bloqueiam leitura automática ou que só vendem por marketplaces não estão cobertas. D'Plácido, n-1 edições e Marcial Pons estão desativadas por esse motivo.
 - A classificação por área é automática e pode errar, principalmente sem a chave da Anthropic.
 - "Produto novo no site" nem sempre é lançamento. Pode ser reimpressão, nova edição ou um item que a editora só agora cadastrou.
 - O plano gratuito do Brevo permite 300 e-mails por dia. Para um grupo de amigos isso sobra.

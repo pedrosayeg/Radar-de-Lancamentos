@@ -75,6 +75,9 @@ def ler(url: str, fonte: dict) -> dict | None:
          or (isinstance(b.get("@type"), list) and {"Product", "Book"} & set(b["@type"]))),
         {},
     )
+    og_tipo = _meta(pagina, "og:type").lower()
+    eh_produto = bool(produto) or any(t in og_tipo for t in ("product", "book")) or bool(
+        re.search(r'(product:price:amount|itemprop=["\']price["\']|"@type"\s*:\s*"(Product|Book|Offer)")', pagina, flags=re.I))
     titulo = produto.get("name") or _meta(pagina, "og:title")
     if not titulo:
         m = re.search(r"<h1[^>]*>(.*?)</h1>", pagina, flags=re.S | re.I)
@@ -90,6 +93,9 @@ def ler(url: str, fonte: dict) -> dict | None:
         m = re.search(r",\s+de\s+([A-ZÀ-Ý][^,]{2,80})$", titulo)
         if m:
             autores, titulo = m.group(1).strip(), titulo[:m.start()]
+    if not autores and " — " in titulo:
+        # Formato "TÍTULO — Autor"
+        titulo, autores = (p.strip() for p in titulo.rsplit(" — ", 1))
     if not autores:
         # Formato "TÍTULO - Sobrenome, Nome; Sobrenome, Nome"
         m = re.search(r"\s+-\s+([A-ZÀ-Ý][^\-–|]*?,\s*[A-ZÀ-Ý][^\-–|]*)$", titulo)
@@ -118,4 +124,5 @@ def ler(url: str, fonte: dict) -> dict | None:
         "categorias": [c for c in [produto.get("category")] if isinstance(c, str)],
         "imagem": imagem or _meta(pagina, "og:image"),
         "data_lancamento": None,
+        "eh_produto": eh_produto,
     }

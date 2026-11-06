@@ -190,7 +190,28 @@ def sitemap(fonte: dict) -> list[dict]:
     return saida
 
 
+# ---------------------------------------------------------------- Páginas de vitrine
+def pagina(fonte: dict) -> list[dict]:
+    """Para sites sem sitemap útil. Lê uma ou mais páginas (em geral a inicial ou a de lançamentos)
+    e pega os links de produto que casam com `incluir_url`. Os detalhes são lidos só para links novos."""
+    if not fonte.get("incluir_url"):
+        raise RuntimeError("fonte do tipo pagina precisa de incluir_url")
+    incluir = re.compile(fonte["incluir_url"])
+    excluir = re.compile(fonte["excluir_url"]) if fonte.get("excluir_url") else None
+    saida: dict[str, dict] = {}
+    for endereco in fonte.get("paginas") or [fonte["url"]]:
+        conteudo = http.texto(endereco)
+        for href in re.findall(r'href=["\']([^"\'#]+)["\']', conteudo):
+            url = urljoin(endereco, html.unescape(href)).split("?")[0]
+            if incluir.search(url) and not (excluir and excluir.search(url)):
+                saida.setdefault(url, {"url": url, "precisa_detalhe": True})
+    if not saida:
+        raise RuntimeError("nenhum link de produto encontrado na página (o site pode ter mudado)")
+    return list(saida.values())
+
+
 COLETORES = {
+    "pagina": pagina,
     "shopify": shopify,
     "woocommerce": woocommerce,
     "vtex": vtex,
