@@ -79,9 +79,9 @@
    "conhecidos": 100
   },
   "Zagodoni": {
-   "falhas_seguidas": 0,
+   "falhas_seguidas": 1,
    "ultima_ok": "2026-11-06",
-   "ultimo_erro": "",
+   "ultimo_erro": "2026-11-06: falha ao acessar https://zagodoni.com.br/wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc: HTTPSConnectionPool(host='zagodoni.com.br', port=443): Max retries exceeded with url: /wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc (Caused by NewConnectionErr",
    "conhecidos": 100
   },
   "Contracorrente": {
@@ -139,9 +139,9 @@
    "conhecidos": 100
   },
   "Mórula": {
-   "falhas_seguidas": 0,
+   "falhas_seguidas": 1,
    "ultima_ok": "2026-11-06",
-   "ultimo_erro": "",
+   "ultimo_erro": "2026-11-06: falha ao acessar https://morula.com.br/wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc: HTTPSConnectionPool(host='morula.com.br', port=443): Max retries exceeded with url: /wp-json/wc/store/v1/products?per_page=50&page=1&orderby=date&order=desc (Caused by NewConnectionError(\"",
    "conhecidos": 100
   },
   "Sobinfluência": {
@@ -208,13 +208,13 @@
    "falhas_seguidas": 0,
    "ultimo_erro": "",
    "ultima_ok": "2026-11-06",
-   "conhecidos": 20
+   "conhecidos": 28
   },
   "Jandaíra": {
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-06",
    "ultimo_erro": "",
-   "conhecidos": 239
+   "conhecidos": 242
   },
   "Fórum": {
    "falhas_seguidas": 0,
@@ -229,5 +229,5 @@
    "conhecidos": 1490
   }
  },
- "ultima_execucao": "2026-11-06T14:27-03:00"
+ "ultima_execucao": "2026-11-06T14:42-03:00"
 }

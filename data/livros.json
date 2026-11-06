@@ -1,5 +1,134 @@
 [
  {
+  "url": "https://www.edusp.com.br/livros/arquitetos-da-poli/",
+  "titulo": "Os Arquitetos da Poli: Ensino e Profissão em São Paulo",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Estudo histórico sobre o ensino de Arquitetura na primeira instituição que ofereceu a especialização em São Paulo a Escola Politécnica e sobre a influência do ensino na atuação dos arquitetos paulistanos. A autora realizou extensa pesquisa para compor este quadro que busca estabelecer relações econômicas, políticas e sociais entre formação institucional e atividade profissional. Temas...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Política",
+   "História"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/bibliotheca-universitatis-1-e-2/",
+  "titulo": "Bibliotheca Universitatis – Vol.1 e Vol.2: Livros Impressos do Século XVII, Acervo Bibliográfico da USP",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Este segundo volume de Bibliotheca Universitatis reúne mil volumes e / ou coleções datadas do século XVII, entre os quais preciosas raridades, localizadas em quinze bibliotecas da Universidade, destacando-se entre elas as da Faculdade de Direito e do Instituto de Estudos Brasileiros. O catálogo documenta as obras, descrevendo-as e marcando sua importância. Apresenta ao final...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "História",
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/bilac-o-jornalista/",
+  "titulo": "Bilac, o Jornalista",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Neste trabalho, Antonio Dimas resgata as intervenções jornalísticas do líder do movimento parnasiano, propondo uma nova visão sobre sua atuação. Para tanto, ele garimpou as crônicas publicadas na imprensa carioca e paulista entre os anos de 1890 e 1910 aproximadamente, as quais se encontram reproduzidas nos dois primeiros volumes de Bilac, o Jornalista. No terceiro...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Sociologia"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/crescimento-economico-e-distribuicao-de-renda/",
+  "titulo": "Crescimento Econômico e Distribuição de Renda: Prioridades para Ação",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Este livro responde a dez questões econômicas e sociais que se tornaram prioritárias para o Brasil e outros países da América Latina: educação, saúde, emprego, habitação, proteção social, infraestrutura, reforma tributária, inovação, comércio internacional e serviços financeiros. A linha comum entre os textos é a preocupação em ultrapassar o diagnóstico e apresentar proposições concretas, mantendo...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Economia",
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/executivos-negros/",
+  "titulo": "Executivos Negros: Racismo e Diversidade no Mundo Empresarial",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Pedro Jaime aborda a inclusão do negro na sociedade brasileira a partir da investigação do racismo e da diversidade no contexto empresarial paulistano, dando espaço, nesta obra, para as vozes de uma categoria social que denomina de executivos negros . Além de apresentar um levantamento numérico e qualitativo destes indivíduos e do cargo que ocupam,...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Sociologia"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/mundo-inteiro-como-lugar-estranho/",
+  "titulo": "Mundo Inteiro como Lugar Estranho, O",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Nesta obra, Néstor García Canclini combina diversos gêneros, reflexões e temas para analisar as migrações e outras formas de estraneidade, como as que experimentamos diante das inovações da comunicação por meio de redes digitais, as mudanças na vida pública operadas pela videopolítica e a espionagem da vida privada. O autor dialoga com pesquisadores de várias...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Sociologia"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/metamorfoses-do-espaco-habitado/",
+  "titulo": "Metamorfoses do Espaço Habitado: Fundamentos Teóricos e Metodológicos da Geografia",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "Milton Santos concebeu este livro em colaboração com Denise Elias visando debater algumas realidades do presente e os conceitos delas resultantes. Para isso, procura situar a geografia no contexto do mundo atual, buscando, ademais, rediscutir categorias tradicionais e sugerir algumas linhas de reflexão metodológica, tomando como ponto de partida as metamorfoses do espaço habitado. Para...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Outras humanidades"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-06",
+  "enviado_em": null
+ },
+ {
   "url": "https://www.bazardotempo.com.br/products/o-mar-entre-nos",
   "titulo": "O mar entre nós",
   "autores": "",
