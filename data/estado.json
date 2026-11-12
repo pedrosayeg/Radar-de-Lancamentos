@@ -2,232 +2,232 @@
  "fontes": {
   "Boitempo": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 787
+   "conhecidos": 788
   },
   "Companhia das Letras (inclui Zahar e demais selos)": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 109
+   "conhecidos": 110
   },
   "Vozes": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 104
   },
   "Grupo Record": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 1000
+   "conhecidos": 1006
   },
   "Hedra": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 290
   },
   "Veneta": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 255
   },
   "Todavia": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 623
   },
   "Autêntica": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 806
   },
   "Fósforo": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 298
   },
   "Perspectiva": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 1253
   },
   "Expressão Popular": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 110
+   "conhecidos": 111
   },
   "Elefante": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 100
   },
   "Autonomia Literária": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 100
   },
   "Zagodoni": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 100
   },
   "Contracorrente": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 280
   },
   "JusPodivm": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 1570
   },
   "Thoth": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 3648
+   "conhecidos": 3654
   },
   "Ubu": {
-   "falhas_seguidas": 0,
+   "falhas_seguidas": 1,
    "ultima_ok": "2026-11-11",
-   "ultimo_erro": "",
+   "ultimo_erro": "2026-11-12: falha ao acessar https://www.ubueditora.com.br: HTTPSConnectionPool(host='www.ubueditora.com.br', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ubueditora.com.br', port=443) at 0x7a6dc983e1e0>, 'Connection to www.ubueditora.com.br timed out. (c",
    "conhecidos": 37
   },
   "Editora 34": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 23
   },
   "Editora Unesp": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 42
   },
   "Bazar do Tempo": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 206
+   "conhecidos": 209
   },
   "Âyiné": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 215
   },
   "Relicário": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 100
   },
   "Mórula": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 100
   },
   "Sobinfluência": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 112
   },
   "n-versos": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 120
   },
   "GLAC edições": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 69
   },
   "Editora Fi": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 23
   },
   "Cobogó": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 334
   },
   "Loyola (filosofia e humanidades)": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 434
   },
   "WMF Martins Fontes": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 481
   },
   "Contexto": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 1282
   },
   "Blucher": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 2089
   },
   "EdUFSCar": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 4145
+   "conhecidos": 4147
   },
   "Edusp": {
    "falhas_seguidas": 0,
    "ultimo_erro": "",
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "conhecidos": 41
   },
   "Jandaíra": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 243
   },
   "Fórum": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
-   "conhecidos": 2270
+   "conhecidos": 2272
   },
   "Grupo GEN (Forense, Atlas, Método e outros)": {
    "falhas_seguidas": 0,
-   "ultima_ok": "2026-11-11",
+   "ultima_ok": "2026-11-12",
    "ultimo_erro": "",
    "conhecidos": 1494
   }
  },
- "ultima_execucao": "2026-11-11T15:46-03:00"
+ "ultima_execucao": "2026-11-12T16:04-03:00"
 }
