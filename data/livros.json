@@ -1,5 +1,188 @@
 [
  {
+  "url": "https://www.ubueditora.com.br/prazer-trabalho-especial.html",
+  "titulo": "O prazer do trabalho – Edição especial",
+  "autores": "",
+  "editora": "Ubu",
+  "descricao": "{{block class=\"\\Magezon\\PageBuilder\\Block\\Profile\"…",
+  "categorias": [],
+  "imagem": "https://www.ubueditora.com.br/pub/media/catalog/product/cache/f216cc6bf6fcde9628ccc374fd71ede7/w/m/wm_thumb.jpg",
+  "data_lancamento": null,
+  "fonte": "Ubu",
+  "areas": [
+   "Sociologia"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://editoraunesp.com.br/catalogo/9786557113868,deuses-e-deusas-da-grecia-explicados-as-criancas",
+  "titulo": "Deuses e deusas da Grécia explicados às crianças",
+  "autores": "",
+  "editora": "Editora Unesp",
+  "descricao": "",
+  "categorias": [],
+  "imagem": "http://editoraunesp.com.br/catalogo/9786557113868,deuses-e-deusas-da-grecia-explicados-as-criancas/capa",
+  "data_lancamento": null,
+  "fonte": "Editora Unesp",
+  "areas": [
+   "Outras humanidades"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/trabalho-flexivel-empregos-precarios-uma-comparacao-brasil-franca-japao/",
+  "titulo": "Trabalho Flexível, Empregos Precários? Uma Comparação Brasil, França, Japão",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "As novas relações de trabalho, a flexibilização das formas de emprego e o crescente desemprego são a temática central desta obra, que reúne a contribuição de sociólogos, economistas e antropólogos do trabalho. Os textos que compõem a coletânea são o resultado do colóquio internacional Novas Formas do Trabalho e do Desemprego: Brasil, Japão e França...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Sociologia",
+   "Economia"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/tortura-na-era-dos-direitos-humanos/",
+  "titulo": "Tortura na Era dos Direitos Humanos",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "O uso sistemático da tortura está incluído na lista das práticas inaceitáveis de uso abusivo da força por parte de agentes públicos ou do poder por parte dos governantes, regulamentada num tratado internacional do qual o Brasil é signatário. Entretanto, seu uso ainda não foi abolido em vários lugares do mundo, e a priorização à...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Direito",
+   "Política"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.edusp.com.br/livros/teoria-quantica-dos-campos/",
+  "titulo": "Teoria Quântica dos Campos",
+  "autores": "",
+  "editora": "Edusp",
+  "descricao": "A teoria quântica dos campos reúne dois pilares da física: a relatividade restrita e a mecânica quântica. Na primeira parte da obra são feitas revisões de aspectos básicos do grupo de Lorentz e do formalismo lagrangiano com ênfase nas simetrias dos campos clássicos. O autor desenvolve os métodos de quantização canônica e de integrais de...",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Edusp",
+  "areas": [
+   "Outras humanidades"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.editorathoth.com.br/produto/ebook/atuacao-e-educacao-em-direitos-humanos-as-policias-latinoamericanas-dezenas-de-entrevistas-nacionais-e-internacionais/2124",
+  "titulo": "Atuação e Educação em Direitos Humanos às Polícias Latinoamericanas: Dezenas de Entrevistas Nacionais e Internacionais",
+  "autores": "",
+  "editora": "Thoth",
+  "descricao": "",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Thoth",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.editorathoth.com.br/produto/ebook/deferencia-no-controle-externo-a-business-judgment-rule-nas-decisoes-do-tribunal-de-contas-da-uniao-(20102026)/2123",
+  "titulo": "Deferência no Controle Externo: A Business Judgment Rule Nas Decisões do Tribunal de Contas da União (2010–2026)",
+  "autores": "",
+  "editora": "Thoth",
+  "descricao": "",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Thoth",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://negocios.forumconhecimento.com.br/produto/constitucionalismo-transnacional-153356",
+  "titulo": "CONSTITUCIONALISMO TRANSNACIONAL",
+  "autores": "",
+  "editora": "Fórum",
+  "descricao": "É possível falar em constitucionalismo e constituição para além do Estado? Se os processos de globalização ocorridos na segunda metade do século XX já pareciam evidenciar o surgimento de um fenômeno constitucional global, as recentes crises sanitárias e ambientais afirmam este como um dos principais objetos de estudo no meio jurídico para o século XXI. Já debatido sob os “rótulos” de constitucionalismo global, pós-nacional, internacional, transconstitucional, entre outros, a obra Constitucionalismo transnacional enfatiza as possíveis convergências entre as principais proposições teóricas…",
+  "categorias": [],
+  "imagem": "https://editoraforum.fbitsstatic.net/img/p/constitucionalismo-transnacional-153356/340274-1.jpg?w=545&h=800&v=202611121040",
+  "data_lancamento": null,
+  "fonte": "Fórum",
+  "areas": [
+   "Direito",
+   "História"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://negocios.forumconhecimento.com.br/produto/metodos-consensuais-de-solucao-de-conflitos-nos-tribunais-de-contas-153358",
+  "titulo": "MÉTODOS CONSENSUAIS DE SOLUÇÃO DE CONFLITOS NOS TRIBUNAIS DE CONTAS",
+  "autores": "",
+  "editora": "Fórum",
+  "descricao": "Dissertação de mestrado aprovada com menção honrosa e homenagem de reconhecimento de mérito profissional no Instituto Brasileiro de Ensino, Desenvolvimento e Pesquisa (IDP), além de premiada pelo Tribunal de Contas da União com o Prêmio Ministro Guilherme Palmeira, a obra tem por objeto o estudo da utilização de métodos consensuais pelos Tribunais de Contas.O tema, que sofreu mudanças significativas na doutrina ao longo dos anos e recentemente foi submetido ao Supremo Tribunal Federal na ADPF 1183, é estudado a partir do caso da 1ª Mesa Técnica promovida pelo Tribunal de Contas do Estado de…",
+  "categorias": [],
+  "imagem": "https://editoraforum.fbitsstatic.net/img/p/metodos-consensuais-de-solucao-de-conflitos-nos-tribunais-de-contas-153358/340276-1.jpg?w=545&h=800&v=202611121406",
+  "data_lancamento": null,
+  "fonte": "Fórum",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
+  "url": "https://negocios.forumconhecimento.com.br/produto/resolutividade-como-slogan-–-volume-1-153363",
+  "titulo": "RESOLUTIVIDADE COMO SLOGAN? – VOLUME 1",
+  "autores": "",
+  "editora": "Fórum",
+  "descricao": "Na última década a noção de resolutividade passou a fazer parte do cotidiano do Ministério Público brasileiro. Diariamente, promotores e procuradores buscam tornar suas práticas resolutivas, e o Conselho Nacional do Ministério Público incentiva essa postura. Mas, afinal, o que é resolutividade? Esse novo vocábulo – e as medidas que o expressariam – efetivamente alteraram o modo de atuar dos membros do Ministério Público brasileiro? Foram elas, de fato, encampadas pelos ramos e unidades do MP? Fruto da tese de doutorado defendida pela autora na Faculdade de Direito da Universidade de São…",
+  "categorias": [],
+  "imagem": "https://editoraforum.fbitsstatic.net/img/p/resolutividade-como-slogan-–-volume-1-153363/340281-1.jpg?w=545&h=800&v=202611121406",
+  "data_lancamento": null,
+  "fonte": "Fórum",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-13",
+  "enviado_em": null
+ },
+ {
   "url": "https://www.boitempoeditorial.com.br/produto/karl-marx-e-os-estados-unidos-153201",
   "titulo": "Karl Marx e os Estados Unidos",
   "autores": "",
