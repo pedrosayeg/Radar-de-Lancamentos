@@ -1,5 +1,138 @@
 [
  {
+  "url": "https://editoraelefante.com.br/produto/nenhum-povo-e-uma-ilha/",
+  "titulo": "Nenhum povo é uma ilha",
+  "autores": "",
+  "editora": "Elefante",
+  "descricao": "Nenhum povo é uma ilha: haitianos e dominicanos em um mundo cindido Organização: Aline Miglioli, Camila Braga, Fabio Luis Barbosa dos Santos & Rodrigo C. Bulamah Edição: Tadeu Breda Revisão: Carolina Kuhn Facchin Capa & direção de arte: Bianca Oliveira Diagramação: Daniela Miwa Taira Lançamento: dezembro de 2026 Páginas: 248 Dimensões: 13,5 x 21 cm ISBN: 9786560081581",
+  "categorias": [
+   "Destaque",
+   "Livro da Elefante",
+   "Pré-venda",
+   "Realidade Latino-Americana"
+  ],
+  "imagem": "https://editoraelefante.com.br/wp-content/uploads/2026/11/Nenhum-povo-e-uma-ilha-Mockup.jpg",
+  "data_lancamento": null,
+  "fonte": "Elefante",
+  "areas": [
+   "Outras humanidades"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
+  "url": "https://editoraunesp.com.br/catalogo/9786557112977,aspectos-do-novo-radicalismo-de-direita-2-edicao",
+  "titulo": "Aspectos do novo radicalismo de direita - 2ª edição",
+  "autores": "",
+  "editora": "Editora Unesp",
+  "descricao": "",
+  "categorias": [],
+  "imagem": "http://editoraunesp.com.br/catalogo/9786557112977,aspectos-do-novo-radicalismo-de-direita-2-edicao/capa",
+  "data_lancamento": null,
+  "fonte": "Editora Unesp",
+  "areas": [
+   "Outras humanidades"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.editoracontexto.com.br/pacote-proclamacao-da-republica/p",
+  "titulo": "Pacote Proclamação da República | 3 livros com 25% de desconto",
+  "autores": "",
+  "editora": "Contexto",
+  "descricao": "Pacote Proclamação da República | 3 livros com 25% de desconto",
+  "categorias": [
+   "Pacotes e coleções"
+  ],
+  "imagem": "https://editoracontexto.jetassets.com.br/produto/20261112101710_3271996729_D.png",
+  "data_lancamento": null,
+  "fonte": "Contexto",
+  "areas": [
+   "História"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.editorathoth.com.br/produto/ebook/arbitragem-e-poder-judiciario-perspectivas-sobre-a-autonomia-e-o-controle-estatal/2126",
+  "titulo": "Arbitragem e Poder Judiciário: Perspectivas Sobre a Autonomia e o Controle Estatal",
+  "autores": "",
+  "editora": "Thoth",
+  "descricao": "",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Thoth",
+  "areas": [
+   "Política"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.editorathoth.com.br/produto/ebook/proporcionalidade-processual-e-precedentes-aplicacoes-no-processo-coletivo-e-irdr/2125",
+  "titulo": "Proporcionalidade Processual e Precedentes: Aplicações no Processo Coletivo e IRDR",
+  "autores": "",
+  "editora": "Thoth",
+  "descricao": "",
+  "categorias": [],
+  "imagem": "",
+  "data_lancamento": null,
+  "fonte": "Thoth",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.grupogen.com.br/livro-direito-antitruste-5-edicao-2024-eduardo-molan-gaban-juliana-oliveira-domingues-saraiva-jur-9788553623020",
+  "titulo": "Direito Antitruste - 5ª Edição 2024",
+  "autores": "",
+  "editora": "Grupo GEN",
+  "descricao": "Nessa obra, que já pode ser considerada um clássico da matéria no Brasil, os professores Eduardo Gaban e Juliana Domingues expõem conceitos fundamentais a compreensão acadêmica do direito antitruste brasileiro e lançam luzes importantes.",
+  "categorias": [],
+  "imagem": "https://www.grupogen.com.br/media/catalog/product/9/7/9788553623020.1.png?optimize=low&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
+  "data_lancamento": null,
+  "fonte": "Grupo GEN (Forense, Atlas, Método e outros)",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
+  "url": "https://www.grupogen.com.br/livro-curso-de-direito-processual-civil-vol-3-60-edicao-2027-humberto-theodoro-jr-editora-forense-9786528500574",
+  "titulo": "Curso de Direito Processual Civil - Vol. 3 - 60ª Edição 2027",
+  "autores": "",
+  "editora": "Grupo GEN",
+  "descricao": "Este terceiro volume trata da execução forçada, dos processos nos tribunais, dos recursos e do direito in­tertemporal.",
+  "categorias": [],
+  "imagem": "https://www.grupogen.com.br/media/catalog/product/9/7/9786528500574.6.png?optimize=low&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
+  "data_lancamento": null,
+  "fonte": "Grupo GEN (Forense, Atlas, Método e outros)",
+  "areas": [
+   "Direito"
+  ],
+  "teoria": true,
+  "classificado_por": "palavras-chave",
+  "visto_em": "2026-11-16",
+  "enviado_em": null
+ },
+ {
   "url": "https://www.companhiadasletras.com.br/9788535941623-viena-fin-de-siecle--nova-edicao-/p",
   "titulo": "Viena fin-de-siècle (Nova edição)",
   "autores": "Carl E. Schorske",
