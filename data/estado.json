@@ -199,16 +199,16 @@
    "conhecidos": 2129
   },
   "EdUFSCar": {
-   "falhas_seguidas": 1,
+   "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
-   "ultimo_erro": "2026-11-24: falha ao acessar https://edufscar.com.br/sitemap.xml: HTTPSConnectionPool(host='edufscar.com.br', port=443): Read timed out. (read timeout=40)",
+   "ultimo_erro": "",
    "conhecidos": 4148
   },
   "Edusp": {
    "falhas_seguidas": 0,
    "ultimo_erro": "",
    "ultima_ok": "2026-11-24",
-   "conhecidos": 49
+   "conhecidos": 51
   },
   "Jandaíra": {
    "falhas_seguidas": 0,
@@ -227,7 +227,139 @@
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
    "conhecidos": 1503
+  },
+  "Editora FGV": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 20
+  },
+  "Fundação Perseu Abramo": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 11
+  },
+  "Zazie Edições": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 97
+  },
+  "Circuito": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 225
+  },
+  "Pallas": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Kotter": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Editora UFRJ": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Pedro & João": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Tinta-da-China Brasil": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 244
+  },
+  "Intermeios": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 143
+  },
+  "Mnēma": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 41
+  },
+  "Alameda": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 20
+  },
+  "Annablume": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 729
+  },
+  "Lavrapalavra": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 9
+  },
+  "Mercado de Letras": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 921
+  },
+  "EdUEL": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 727
+  },
+  "Editora Unifesp": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 5
+  },
+  "Editora CRV": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 56
+  },
+  "Revista dos Tribunais (Thomson Reuters)": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Mizuno": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 930
+  },
+  "Del Rey": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
+  },
+  "Arraes": {
+   "falhas_seguidas": 0,
+   "ultima_ok": "2026-11-24",
+   "ultimo_erro": "",
+   "conhecidos": 100
   }
  },
- "ultima_execucao": "2026-11-24T14:32-03:00"
+ "ultima_execucao": "2026-11-24T15:06-03:00"
 }
