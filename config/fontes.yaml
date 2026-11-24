@@ -64,10 +64,11 @@ fontes:
     generalista: true
 
   - nome: Autêntica
-    tipo: sitemap
-    url: https://www.grupoautentica.com.br/sitemap.xml
-    # Só os sub-sitemaps de categorias de não ficção
-    sitemaps_incluir: ["historia", "filosofia", "ciencias-humanas", "ciencias-sociais", "politica", "psicanalise", "psicologia", "educacao", "direito", "negocios-e-economia", "sociologia", "antropologia"]
+    # O sitemap da Autêntica não inclui os lançamentos; lê a vitrine da página inicial
+    tipo: pagina
+    url: https://www.grupoautentica.com.br/
+    incluir_url: "/produto/[^/]+-\\d+$"
+    generalista: true
 
   - nome: Fósforo
     tipo: sitemap
@@ -178,9 +179,10 @@ fontes:
     areas_padrao: [Filosofia]
 
   - nome: WMF Martins Fontes
-    tipo: sitemap
-    url: https://www.wmfmartinsfontes.com.br/sitemap.xml
-    sitemaps_incluir: ["ciencias-humanas", "ciencias-sociais", "filosofia", "direito", "historia", "psicanalise", "psicologia", "sociologia", "politica", "economia", "antropologia"]
+    # O sitemap da WMF não inclui os lançamentos; lê a vitrine da página inicial
+    tipo: pagina
+    url: https://www.wmfmartinsfontes.com.br/
+    incluir_url: "/produto/[^/]+-\\d+$"
     generalista: true
 
   - nome: Contexto
@@ -345,9 +347,10 @@ fontes:
     areas_padrao: [Direito]
 
   - nome: JusPodivm
-    tipo: sitemap
-    url: https://www.editorajuspodivm.com.br/media/sitemap/sitemap.xml
-    excluir_url: "/(colecoes|disciplinas|carrosseis|tag|nivel|autores?|casadinha|combo|kit|black-friday)"
+    # O sitemap da JusPodivm parou de ser atualizado em 2022; lê a vitrine da página inicial
+    tipo: pagina
+    url: https://www.editorajuspodivm.com.br/
+    incluir_url: "^https://www\\.editorajuspodivm\\.com\\.br/[a-z0-9-]+-20\\d{2,3}(-[a-z-]+)*$"
     areas_padrao: [Direito]
 
   - nome: Thoth

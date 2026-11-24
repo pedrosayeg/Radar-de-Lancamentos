@@ -52,7 +52,10 @@ NAO_TEORIA = ["romance", "ficcao", "conto", "contos", "poesia", "poemas", "infan
               "gestao de pessoas", "produtividade", "financas pessoais", "investimentos",
               "recursos humanos", "administracao de empresas", "contabilidade", "redes locais", "programacao",
               "engenharia", "enfermagem", "medicina", "odontolog", "farmac", "nutricao", "fisioterap",
-              "veterinar", "anatomia", "fisiologia", "radiolog", "matematica", "fisica", "quimica", "estatistica", "questoes comentadas", "concurso", "oab 1a fase", "resumo para"]
+              "veterinar", "anatomia", "fisiologia", "radiolog", "matematica", "fisica", "quimica", "estatistica", "questoes comentadas", "concurso", "oab 1a fase", "resumo para",
+              "lei seca", "caderno de estudos", "carreiras policiais", "carreiras trabalhistas", "exame de ordem",
+              "como se preparar", "sinopses para", "revisaco", "esquematizad", "mapas mentais", "codigo de bolso",
+              "discursivas", "2a fase", "pecas praticas", "manual de pecas"]
 
 
 # Indícios de ficção ou de livro infantil na sinopse

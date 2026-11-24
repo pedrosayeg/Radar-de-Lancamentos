@@ -46,7 +46,7 @@
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
-   "conhecidos": 806
+   "conhecidos": 35
   },
   "Fósforo": {
    "falhas_seguidas": 0,
@@ -94,7 +94,7 @@
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
-   "conhecidos": 1570
+   "conhecidos": 1610
   },
   "Thoth": {
    "falhas_seguidas": 0,
@@ -184,7 +184,7 @@
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
-   "conhecidos": 481
+   "conhecidos": 76
   },
   "Contexto": {
    "falhas_seguidas": 0,
@@ -361,5 +361,5 @@
    "conhecidos": 100
   }
  },
- "ultima_execucao": "2026-11-24T15:13-03:00"
+ "ultima_execucao": "2026-11-24T16:45-03:00"
 }
