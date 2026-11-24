@@ -94,7 +94,7 @@
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
-   "conhecidos": 1610
+   "conhecidos": 1636
   },
   "Thoth": {
    "falhas_seguidas": 0,
@@ -361,5 +361,5 @@
    "conhecidos": 100
   }
  },
- "ultima_execucao": "2026-11-24T16:45-03:00"
+ "ultima_execucao": "2026-11-24T16:49-03:00"
 }
