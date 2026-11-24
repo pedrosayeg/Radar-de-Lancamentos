@@ -124,7 +124,7 @@
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
-   "conhecidos": 210
+   "conhecidos": 211
   },
   "Âyiné": {
    "falhas_seguidas": 0,
@@ -142,7 +142,7 @@
    "falhas_seguidas": 0,
    "ultima_ok": "2026-11-24",
    "ultimo_erro": "",
-   "conhecidos": 104
+   "conhecidos": 105
   },
   "Sobinfluência": {
    "falhas_seguidas": 0,
@@ -361,5 +361,5 @@
    "conhecidos": 100
   }
  },
- "ultima_execucao": "2026-11-24T15:06-03:00"
+ "ultima_execucao": "2026-11-24T15:13-03:00"
 }
