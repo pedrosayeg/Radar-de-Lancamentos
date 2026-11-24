@@ -81,9 +81,15 @@ def woocommerce(fonte: dict) -> list[dict]:
                 elif "editora" in nome and termos:
                     editora = termos[0]
             imagens = p.get("images") or []
+            titulo = html.unescape(p.get("name", "")).strip()
+            if fonte.get("nome_e_autor"):
+                # Lojas que cadastram o autor no nome do produto e o título num <h1> da descrição
+                m = re.search(r"<h1[^>]*>(.*?)</h1>", (p.get("short_description") or "") + (p.get("description") or ""), flags=re.S)
+                if m:
+                    autores, titulo = [titulo], limpar_html(m.group(1), 300)
             livros.append({
                 "url": p.get("permalink"),
-                "titulo": html.unescape(p.get("name", "")).strip(),
+                "titulo": titulo,
                 "autores": ", ".join(autores),
                 "editora": editora,
                 "descricao": limpar_html(p.get("short_description") or p.get("description")),

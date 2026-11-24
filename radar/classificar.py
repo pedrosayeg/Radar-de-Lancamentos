@@ -35,7 +35,11 @@ PALAVRAS = {
                     "psicanalit"],
     "História": ["historia", "historic", "histori", "ditadura", "escravid", "imperio", "seculo", "guerra",
                  "memoria", "biografia de", "brasil colonia", "republica"],
-    "Economia": ["economi", "financ", "mercado", "inflac", "desenvolvimento economico", "renda", "fiscal"],
+    "Economia": ["economi", "financ", "mercado", "inflac", "desenvolvimento economico", "renda", "fiscal",
+                 "moeda", "monetar", "dinheiro", "juros", "divida publica", "macroeconom", "microeconom",
+                 "keynes", "schumpeter", "furtado", "piketty", "hayek", "desenvolvimentis", "industrializ",
+                 "comercio internacional", "globaliz", "banco central", "orcamento publico", "crise de 1929",
+                 "acumulacao", "politica economica", "capital financeiro", "economia politica", "tributacao"],
     "Antropologia": ["antropolog", "etnograf", "indigena", "povos originarios", "cosmolog", "xama"],
 }
 

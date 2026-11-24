@@ -10,7 +10,11 @@
 # Campos opcionais:
 #   areas_padrao   áreas usadas quando o classificador não encontrar nenhuma (útil para editoras jurídicas)
 #   ativo          false desliga a fonte sem apagar a configuração
+#   exigir_produto  true para só aceitar páginas que se identificam como produto
 #   aceitar_sem_produto  true quando as páginas de livro do site não se identificam como produto
+#   separador_autor  quando o título vem como "Título - Autor", o separador usado (ex.: " - ")
+#   ignorar_autor  true quando o site informa como autor quem cadastrou a página
+#   nome_e_autor   (woocommerce) true quando o nome do produto é o autor e o título está num <h1> da descrição
 #   editora        nome exibido da editora, se for diferente do nome da fonte
 #   incluir_url    expressão regular que a URL do produto precisa ter (fontes sitemap e pagina)
 #   paginas        lista de endereços a ler (fontes pagina). Sem ela, lê o campo url
@@ -213,6 +217,111 @@ fontes:
     generalista: true
     excluir_url: "/(pagina|categoria|carrinho|conta|contato|quem-somos|blog|autores?|busca|politica)(/|$)"
 
+  - nome: Editora FGV
+    tipo: pagina
+    url: https://editora.fgv.br
+    incluir_url: "/produto/[^/]+"
+
+  - nome: Fundação Perseu Abramo
+    tipo: pagina
+    url: https://fpabramo.org.br
+    paginas: ["https://fpabramo.org.br/livros/", "https://fpabramo.org.br"]
+    incluir_url: "/livro/[^/]+"
+    aceitar_sem_produto: true
+    ignorar_autor: true
+
+  - nome: Zazie Edições
+    tipo: woocommerce
+    url: https://zazie.com.br
+    nome_e_autor: true
+
+  - nome: Circuito
+    tipo: shopify
+    url: https://editoracircuito.com.br
+    separador_autor: [" - ", " – "]
+
+  - nome: Pallas
+    tipo: woocommerce
+    url: https://pallaseditora.com.br
+    generalista: true
+
+  - nome: Kotter
+    tipo: woocommerce
+    url: https://kotter.com.br
+    generalista: true
+
+  - nome: Editora UFRJ
+    tipo: woocommerce
+    url: https://editora.ufrj.br
+    generalista: true
+
+  - nome: Pedro & João
+    tipo: woocommerce
+    url: https://pedroejoaoeditores.com.br
+    generalista: true
+
+  - nome: Tinta-da-China Brasil
+    tipo: sitemap
+    url: https://www.tintadachina.com.br/sitemap.xml.gz
+    incluir_url: "/produtos/[^/]+"
+    separador_autor: " // "
+    generalista: true
+
+  - nome: Intermeios
+    tipo: sitemap
+    url: https://www.intermeioscultural.com.br/sitemap.xml
+    sitemaps_incluir: ["store-products"]
+    incluir_url: "/product-page/"
+    generalista: true
+
+  - nome: Mnēma
+    tipo: sitemap
+    url: https://www.editoramnema.com.br/sitemap.xml
+    incluir_url: "/livros/[^/]+"
+
+  - nome: Alameda
+    tipo: sitemap
+    url: https://www.alamedaeditorial.com.br/sitemap.xml
+    incluir_url: "/livro-"
+
+  - nome: Annablume
+    tipo: sitemap
+    url: https://loja.annablume.com.br/sitemap.xml
+    generalista: true
+
+  - nome: Lavrapalavra
+    tipo: pagina
+    url: https://lavrapalavra.com
+    incluir_url: "/produto/[^/]+"
+
+  - nome: Mercado de Letras
+    tipo: sitemap
+    url: https://mercado-de-letras.com.br/wp-sitemap.xml
+    sitemaps_incluir: ["posts-product-"]
+    incluir_url: "/produto/"
+    generalista: true
+
+  - nome: EdUEL
+    tipo: sitemap
+    url: https://eduel.com.br/sitemap.xml
+    sitemaps_incluir: ["livros.xml"]
+    generalista: true
+
+  - nome: Editora Unifesp
+    tipo: pagina
+    url: https://www.editoraunifesp.com.br
+    incluir_url: "/produto/[^/]+"
+    aceitar_sem_produto: true
+    generalista: true
+
+  - nome: Editora CRV
+    tipo: sitemap
+    url: http://www.editoracrv.com.br/sitemap.xml
+    incluir_url: "/produtos/[^/]+"
+    excluir_url: "/departamentos/"
+    exigir_produto: true
+    generalista: true
+
   # ---------------- Direito ----------------
   - nome: Contracorrente
     tipo: sitemap
@@ -261,3 +370,25 @@ fontes:
     incluir_url: "97[89]\\d{10}"
     excluir_url: "/(e-book|ebook|kit|combo|livro-serie-fundamentos-de-odontologia)"
     generalista: true
+
+  - nome: Revista dos Tribunais (Thomson Reuters)
+    editora: Revista dos Tribunais
+    tipo: vtex
+    url: https://www.livrariart.com.br
+    areas_padrao: [Direito]
+
+  - nome: Mizuno
+    editora: Mizuno
+    tipo: shopify
+    url: https://www.editoramizuno.com.br
+    areas_padrao: [Direito]
+
+  - nome: Del Rey
+    tipo: woocommerce
+    url: https://editoradelrey.com.br
+    areas_padrao: [Direito]
+
+  - nome: Arraes
+    tipo: woocommerce
+    url: https://arraeseditores.com.br
+    areas_padrao: [Direito]

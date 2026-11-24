@@ -1,6 +1,6 @@
 # Radar de Lançamentos
 
-Monitor automático de lançamentos de livros de teoria em direito, política, sociologia, filosofia, psicanálise, história e áreas próximas. Ele lê os sites das editoras todos os dias, guarda os livros novos num catálogo público e manda um resumo semanal por e-mail para quem se inscrever, só com as áreas que cada pessoa escolheu.
+Monitor automático de lançamentos de livros de teoria em direito, política, economia, sociologia, filosofia, psicanálise, história e áreas próximas. Ele lê os sites das editoras todos os dias, guarda os livros novos num catálogo público e manda um resumo semanal por e-mail para quem se inscrever, só com as áreas que cada pessoa escolheu.
 
 Site: https://radar-de-lancamentos.github.io/Radar-de-Lancamentos/ (depois de ativar o GitHub Pages, ver abaixo)
 

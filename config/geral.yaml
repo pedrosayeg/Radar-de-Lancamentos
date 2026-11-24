@@ -1,7 +1,7 @@
 # Configurações gerais do Radar de Lançamentos.
 
 titulo: Radar de Lançamentos
-descricao: Lançamentos de livros de teoria em direito, política, sociologia, filosofia, psicanálise, história e áreas próximas.
+descricao: Lançamentos de livros de teoria em direito, política, economia, sociologia, filosofia, psicanálise, história e áreas próximas.
 
 # Endereço público do site (GitHub Pages). Ajuste se mudar o nome do repositório.
 url_site: https://radar-de-lancamentos.github.io/Radar-de-Lancamentos/

@@ -197,8 +197,17 @@ def executar(args) -> int:
             vistos[nome] = sorted(conjunto)
             for n in novos:
                 n["fonte"] = nome
-                if not n.get("editora"):
-                    n["editora"] = nome
+                if not n.get("editora") or fonte.get("editora"):
+                    n["editora"] = fonte.get("editora") or n.get("editora") or nome
+                if fonte.get("ignorar_autor"):
+                    n["autores"] = ""
+                seps = fonte.get("separador_autor") or []
+                seps = [seps] if isinstance(seps, str) else seps
+                titulo = n.get("titulo") or ""
+                posicoes = [(titulo.rfind(sp), sp) for sp in seps if sp in titulo]
+                if posicoes and not n.get("autores"):
+                    pos, sp = max(posicoes)
+                    n["titulo"], n["autores"] = titulo[:pos].strip(), titulo[pos + len(sp):].strip()
             novos = [n for n in novos if n["url"] not in ids_catalogo]
             limpar_titulos(novos)
             novos = remover_repetidos(novos, titulos_catalogo)
