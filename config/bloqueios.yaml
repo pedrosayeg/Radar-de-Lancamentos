@@ -8,4 +8,6 @@
 
 urls: []
 
-titulos: []
+titulos:
+  # Produto interno da Mizuno, reservado a autores
+  - "apenas para autor"
