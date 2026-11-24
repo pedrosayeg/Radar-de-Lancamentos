@@ -199,9 +199,9 @@
    "conhecidos": 2129
   },
   "EdUFSCar": {
-   "falhas_seguidas": 0,
+   "falhas_seguidas": 1,
    "ultima_ok": "2026-11-24",
-   "ultimo_erro": "",
+   "ultimo_erro": "2026-11-24: falha ao acessar https://edufscar.com.br/sitemap.xml: HTTPSConnectionPool(host='edufscar.com.br', port=443): Read timed out. (read timeout=40)",
    "conhecidos": 4148
   },
   "Edusp": {
@@ -229,5 +229,5 @@
    "conhecidos": 1503
   }
  },
- "ultima_execucao": "2026-11-24T14:19-03:00"
+ "ultima_execucao": "2026-11-24T14:32-03:00"
 }
