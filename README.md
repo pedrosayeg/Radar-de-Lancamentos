@@ -51,6 +51,7 @@ Quem não marcar nenhuma área recebe todas.
 - **Rodar agora**: aba **Actions > Radar de Lançamentos > Run workflow**. Marque "Enviar o e-mail agora" se quiser disparar o resumo fora do dia normal.
 - **Adicionar uma editora**: edite `config/fontes.yaml`. Para descobrir o tipo de loja, rode `python -m radar.diagnostico https://site-da-editora.com.br`.
 - **Desligar uma editora**: coloque `ativo: false` no bloco dela.
+- **Tirar um item do Radar**: acrescente o endereço do produto em `urls` (ou um trecho do título em `titulos`) no arquivo `config/bloqueios.yaml`. O item sai do site na execução seguinte e não volta mais.
 - **Mudar dia do e-mail, áreas ou textos**: `config/geral.yaml`.
 - **Ver se alguma editora quebrou**: no rodapé do site há a tabela "Editoras monitoradas e situação da última leitura".
 

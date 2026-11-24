@@ -1,0 +1,11 @@
+# Itens que nunca devem aparecer no Radar. Vale para o catálogo atual e para coletas futuras.
+#
+# urls     endereço exato do produto (copie do site da editora)
+# titulos  expressões procuradas no título, sem diferenciar maiúsculas e minúsculas
+#
+# Além desta lista, o robô já descarta sozinho objetos, brinquedos, pacotes e livros infantis
+# (ver NAO_LIVRO em radar/classificar.py).
+
+urls: []
+
+titulos: []

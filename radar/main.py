@@ -48,6 +48,22 @@ def carregar_config() -> tuple[dict, list[dict]]:
     return geral, [f for f in fontes if f.get("ativo", True)]
 
 
+def carregar_bloqueios() -> dict:
+    caminho = RAIZ / "config" / "bloqueios.yaml"
+    dado = yaml.safe_load(caminho.read_text(encoding="utf-8")) if caminho.exists() else None
+    dado = dado or {}
+    return {"urls": set(dado.get("urls") or []),
+            "titulos": [re.compile(t, re.I) for t in dado.get("titulos") or []]}
+
+
+def bloqueado(livro: dict, bloqueios: dict) -> bool:
+    if livro.get("url") in bloqueios["urls"]:
+        return True
+    if any(p.search(livro.get("titulo") or "") for p in bloqueios["titulos"]):
+        return True
+    return classificar.nao_e_livro(livro)
+
+
 def dentro_da_janela(data_iso: str | None, dia: dt.date, passado: int, futuro: int) -> bool:
     if not data_iso:
         return False
@@ -65,7 +81,8 @@ def limpar_titulos(livros: list[dict]) -> None:
     """Remove marcações de loja como "[pré-venda]" ou "[envio em 07/12]" do título."""
     for l in livros:
         if l.get("titulo"):
-            l["titulo"] = re.sub(r"\s{2,}", " ", RUIDO_TITULO.sub(" ", l["titulo"])).strip(" -–—")
+            t = re.sub(r"^\s*\[nov[oa]s?\]\s*", "", l["titulo"], flags=re.I)
+            l["titulo"] = re.sub(r"\s{2,}", " ", RUIDO_TITULO.sub(" ", t)).strip(" -–—")
 
 
 def chave_titulo(livro: dict) -> tuple[str, str]:
@@ -152,6 +169,13 @@ def executar(args) -> int:
     catalogo: list[dict] = ler_json(DADOS / "livros.json", [])
     vistos: dict[str, list[str]] = ler_json(DADOS / "vistos.json", {})
     estado: dict = ler_json(DADOS / "estado.json", {"fontes": {}})
+    # Remove do catálogo o que estiver bloqueado (config/bloqueios.yaml) ou não for livro
+    bloqueios = carregar_bloqueios()
+    antes = len(catalogo)
+    catalogo = [l for l in catalogo if not bloqueado(l, bloqueios)]
+    limpar_titulos(catalogo)
+    if len(catalogo) < antes:
+        log(f"{antes - len(catalogo)} item(ns) removido(s) do catálogo por bloqueio ou por não serem livros.")
     ids_catalogo = {l["url"] for l in catalogo}
     titulos_catalogo = {chave_titulo(l) for l in catalogo}
 
@@ -190,7 +214,7 @@ def executar(args) -> int:
         log(f"Classificando {len(novos_total)} livro(s)...")
         classificar.classificar(novos_total, {f["nome"]: f for f in fontes}, config, log)
     descartar = config.get("classificacao", {}).get("descartar_nao_teoria", True)
-    entram = [n for n in novos_total if n.get("teoria") or not descartar]
+    entram = [n for n in novos_total if (n.get("teoria") or not descartar) and not bloqueado(n, bloqueios)]
     for n in entram:
         n.pop("precisa_detalhe", None)
         n["visto_em"] = dia.isoformat()

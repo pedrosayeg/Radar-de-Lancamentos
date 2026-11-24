@@ -57,7 +57,10 @@ SINAIS_FICCAO = ["protagonista", "trama", "personagem", "saga", "thriller", "bes
                  "criancas", "pequenos leitores", "ilustrac", "conto de fadas", "magia", "reino",
                  "volume da serie", "da serie", "trilogia", "leitores jovens", "jovem adulto", "fas de"]
 NAO_LIVRO = ["estojo", "calice", "ciborio", "caneca", "ecobag", "camiseta", "marcador", "poster", "pôster",
-             "vale-presente", "cartao presente", "assinatura do clube"]
+             "vale-presente", "cartao presente", "assinatura do clube", "artigos religiosos", "adorno",
+             "tau franciscano", "terco", "crucifixo", "medalha", "escapulario", "imagem de nossa", "quebra-cabeca",
+             "quebra cabeca", "jogo de", "brinquedo", "pacote", "pacotes e colecoes", "turma da monica",
+             "para criancas", "as criancas", "livro de colorir", "papelaria", "bloco de notas", "caderno"]
 
 
 def _regex(palavras: list[str]) -> re.Pattern:
@@ -67,7 +70,15 @@ def _regex(palavras: list[str]) -> re.Pattern:
 
 _PADROES = {area: _regex(p) for area, p in PALAVRAS.items()}
 _NAO = _regex(NAO_TEORIA + NAO_LIVRO)
+_NAO_LIVRO = _regex(NAO_LIVRO)
 _FICCAO = _regex(SINAIS_FICCAO)
+
+
+def nao_e_livro(livro: dict) -> bool:
+    """Produtos que não são livros de teoria (objetos, brinquedos, pacotes, infantis), pelo título e categorias.
+    Vale também para itens classificados pela IA e é aplicado de novo ao catálogo inteiro a cada execução."""
+    cabecalho = _norm(" ".join(livro.get("categorias") or []) + " " + (livro.get("titulo") or "") + " ")
+    return bool(_NAO_LIVRO.search(cabecalho))
 
 
 def heuristica(livro: dict, fonte: dict, areas_validas: list[str]) -> dict:
